@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>De-Car Deliv</title>
+  <link rel="shortcut icon"  href="ico.png" />
+  <!-- Core css -->
+  <link rel="stylesheet" id="bulma" href="assets/css/bulma.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/core_flashy.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <!-- Plugins css -->
+  <link rel="stylesheet" type="text/css" href="assets/js/slick-carousel/slick.css">
+  <link rel="stylesheet" type="text/css" href="assets/js/slick-carousel/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="assets/js/ggpopover/ggtooltip.css">
+  <link rel="stylesheet" type="text/css" href="assets/js/wallop/wallop.css">
+  <link rel="stylesheet" type="text/css" href="assets/js/wallop/wallop--scale.css">
+  <!-- Icons -->
+  <link rel="stylesheet" type="text/css" href="assets/css/icons.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700,300'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+
+    .joinbutton{
+     width: 100px;
+     height: 40px;
+     border: 2px solid #009cdf;
+     margin: 10px;
+     border-radius: 30px;
+     padding: 5px 2px;
+     text-align: center;
+     color: white;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+   }
+   .joinbutton:hover {
+    background-color: #009cdf;
+  }
+  footer.footer-dark {
+    background: #002e64;
+    color: #ffffff;
+    position: relative;
+  }
+
+  .footer {
+    padding: 3rem 1.5rem 6rem;
+  }
+
+  .container {
+    position: relative;
+  }
+  .bg-img{
+    margin:55px;
+  }
+  footer.footer-dark .columns {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media screen and (max-width: 768px){
+    .footer-columns.is-flex-mobile {
+      flex-wrap: wrap!important;
+    }
+  }
+  .social-media{
+    float:right;
+  }
+  @media only screen and (max-width: 480px) {
+    .social-media {
+      display:none;
+    }
+  }
+  .social-media ul{
+    margin:0;
+    padding:0;
+  }
+  .social-media li{
+    float:left;
+    display:block;
+    margin:18px 0 0 15px;
+  }
+  .social-media li a{
+    color:#4b4b4b;
+    border:1px solid #009cdf;
+    padding:5px 7px;
+  }
+  .social-media li a:hover{
+    color:#ededed;
+    border:1px solid #ededed;
+  }
+  .fa{
+    display:inline-block;
+    font:normal normal normal 14px/1 FontAwesome;
+    text-rendering:auto;
+    width:14px;
+    text-align:center;
+  } 
+  /*Info*/
+  body, html {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  footer.footerdark {
+    background: #ffffff;
+    color: $white;
+    position: relative;
+    .columns {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .footer-logo {
+      padding: 10px 0;
+      img {
+        height: 25px;
+      }
+    }
+    .footer-column {
+      .footer-header {
+        padding: 10px 0;
+        h3 {
+          font-family: 'Nexa Bold', sans-serif;
+          font-weight:400;
+          font-size: 1.1rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 0 !important;
+          color: $light-grey;
+        }
+      }
+      ul.link-list {
+        line-height: 30px;
+        font-size: 1rem;
+        a {
+          color: $light-white;
+          font-weight: 400;
+          transition: all 0.5s;
+        }
+        :hover {
+          color: $smoke-white;
+        }
+      }
+      .level-item .icon {
+        color: $primary;
+        transition: all 0.5s;
+        :hover {
+          color: $smoke-white;
+        }
+      }
+      .copyright {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .heroimage{
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background: url('ojek.jpg') no-repeat center;
+    background-size: cover;
+  }
+  .cont{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .cont h1{
+    font-size: 40px;
+    letter-spacing: 0.2em;
+    margin: 0;
+  }
+  .cont h1 span{
+    border: 10px solid white;
+    padding: 6px 14px;
+    display: inline-block;
+  }
+  .des{
+    margin: 20px;
+    display: block;
+    font-size: 26px;
+    text-shadow: 0 0 10px black;
+  }
+
+  .bg-img1 {
+    /* The image used */
+    background-image: url("i2.jpg");
+
+    min-height: 380px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .bg-img2 {
+    /* The image used */
+    background-image: url("i1.jpg");
+
+    min-height: 380px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .bg-img3 {
+    /* The image used */
+    background-image: url("i3.jpg");
+
+    min-height: 380px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  /* Add styles to the form container */
+  .info1 {
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    padding: 10px;
+    border: 1px  grey;
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    margin-bottom: 100px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+  }
+  .info2 {
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    border: 1px  grey;
+    position: relative;
+    right: 0;
+    margin-top: 200px;
+    margin: 20px;
+    max-width: 300px;
+    height: 360px;
+    padding: 16px;
+    background-color: white;
+  }
+  .Wallop .Wallop-dot--current{
+    background-color: #009cdf !important;
+  }
+  .Wallop .Wallop-caption.is-centered .main-inner{
+    justify-content: left !important;
+  }
+  .text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+  }
+  /* Style the tab */
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  /* Reset. */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Panels. */
+  .splitview {
+    position: relative;
+    width: 100%;
+    min-height: 45vw;
+    overflow: hidden;
+  }
+
+  .panel {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    overflow: hidden;
+  }
+
+  .panel .content {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    color: #FFF;
+  }
+
+  .panel .description {
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .panel img {
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  .bottom {
+    background-color: rgb(44, 44, 44);
+    z-index: 1;
+  }
+
+  .bottom .description {
+    right: 5%;
+  }
+
+  .top {
+    background-color: rgb(77, 69, 173);
+    z-index: 2;
+    width: 50vw;
+
+    /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
+  }
+
+  .top .description {
+    left: 5%;
+  }
+
+  /* Handle. */
+  .handle {
+    height: 100%;
+    position: absolute;
+    display: block;
+    background-color: rgb(253, 171, 0);
+    width: 5px;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+  }
+
+  /* Skewed. */
+  .skewed .handle {
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    transform-origin: top;
+  }
+
+  .skewed .top {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+  }
+
+  .skewed .top .content {
+    transform: skew(30deg);
+    margin-left: 1000px;
+  }
+
+  /* Responsive. */
+  @media (max-width: 900px) {
+    body {
+      font-size: 75%;
+    }
+  }
+  #backtotop.visible a:hover{
+    background-color: #009cdf !important;
+  }
+  .hero.is-primary{
+    background-color: #009cdf !important;
+  }
+  /*login*/
+
+  .login{
+    min-height: 100vh;
+    background-color: white;
+  }
+  .login .login-page{
+    height: 100vh;display: flex;align-items: center;
+  }
+  .login .login-sidebar, .login-form-wrapper{
+    background: white;height: 80vh;
+  }
+  .login .login-sidebar{
+    background:  url('2.jpg')center center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .login .login-sidebar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(to bottom right,#009cdf,white);
+    opacity: .8;
+  }
+  .login .login-sidebar .login-gradient-background{
+    position: absolute;z-index: 2;
+  }
+  .login .login-sidebar .login-gradient-background h1{
+    font-size: 2em;font-weight: 600;text-transform: uppercase;color: white;
+  }
+
+  .login-form-wrapper .register-btn a{
+    color: #ffffff;border-radius: 18px;padding: 0.57em 2em;background: #009cdf;
+  }
+  .login-form-wrapper .register-btn a:hover{
+    opacity: .8;
+  }
+  .field-box .field{margin-bottom: 2.1em;}
+  .login-form-wrapper .field-box{
+    display: flex;
+    height: 80%;
+    align-items: center;
+  }
+  .login-form-wrapper .field-box .login-heading{
+    font-size: 1.95em;
+  }
+  .login-form-wrapper .field-box .login-subheading{
+    margin-bottom: 2em;font-size: 0.85em;color: #787877;
+  }
+
+  .login-form-wrapper .field-box .login-btn-group .login-btn{
+    background: #009cdf;color: #ffffff;border-radius: 18px;padding: 0.57em 2em;
+  }
+  .login-form-wrapper .field-box .login-btn-group .forgot-link{
+    color: #777777;font-size: 0.85em;
+  }
+  .login-form-wrapper .field-box .login-btn-group .forgot-link:hover{
+    color: #444444;font-size: 0.85em;
+  }
+  .navigation-tabs .navtab-content{
+    padding:0 !important;
+    background-color: white !important; 
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- Hero and nav -->
+  <div class="hero is-cover is-relative is-fullheight is-default is-bold">
+    <div class="navbar-wrapper navbar-fade navbar-light">
+      <div class="hero-head">
+        <!-- Nav -->
+        <div class="container">
+          <nav class="nav">
+            <div class="container big">
+              <div class="nav-left">
+                <a class="nav-item" href="agency.html">
+                  <img class="logo" src="delivlogobiru.png" alt="" style=" min-height: 50px;">
+                </a>
+                <!-- Sidebar trigger -->
+                <a id="navigation-trigger" class="nav-item hamburger-btn" href="javascript:void(0);">
+                </a>
+                <a href="agency-about.html" class="nav-item is-tab nav-inner is-not-mobile" style="background-color:#009cdf; ">
+                  De-Car
+                </a>
+                <a href="agency-portfolio.html" class="nav-item is-tab nav-inner is-not-mobile">
+                  FAQ
+                </a>
+                <a href="agency-blog.html" class="nav-item is-tab nav-inner is-not-mobile">
+                  Contact
+                </a>
+              </div>
+              <!-- Responsive toggle -->
+              <span class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+              <div class="nav-right nav-menu">
+
+                <a href="agency-about.html" class="nav-item is-tab nav-inner is-menu-mobile" style="background-color:#009cdf;"> De-Car
+                </a>
+                <a href="agency-portfolio.html" class="nav-item is-tab nav-inner is-menu-mobile">
+                  FAQ
+                </a>
+                <a href="agency-blog.html" class="nav-item is-tab nav-inner is-menu-mobile">
+                  Contact
+                </a>
+                <span class="nav-item">
+                  <a href="Join.html" class="joinbutton" style="color: black;">
+                    <center>Join Driver</center>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- /Nav -->
+      </div>
+    </div>
+    <div>
+
+      <div>
+        <div class="splitview skewed">
+          <div class="panel bottom">
+            <div class="content">
+              <div class="description">
+                <h1>The original image.</h1>
+                <p>This is how the image looks like before applying a duotone effect.</p>
+              </div>
+
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/original-image.jpg" alt="Original">
+            </div>
+          </div>
+
+          <div class="panel top">
+            <div class="content">
+              <div class="description">
+                <h1>The duotone image.</h1>
+                <p>This is how the image looks like after applying a duotone effect.</p>
+              </div>
+
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/duotone-image.jpg" alt="Duotone">
+            </div>
+          </div>
+
+          <div class="handle"></div>
+        </div>
+        <div>
+          <!-- Navigation pills -->
+          <div class="columns is-vcentered">
+            <div style="margin:20px;" class="column">
+              <div class="navigation-tabs outlined-pills animated-tabs mb-40">
+                <div class="tabs is-centered">
+                  <ul>
+                    <li class="tab-link is-active" data-tab="new-deals"><a>REGISTRASI</a></li>
+                    <li class="tab-link" data-tab="invoices"><a>MASUK</a></li>
+                  </ul>
+                </div>
+                <!-- Pill content -->
+                <div id="new-deals" class="navtab-content pt-20 pb-20 is-active">
+                  <div class="columns is-vcentered">
+                    <div class="column is-12">
+                     <section class="login is-fullheight">
+                      <div class="login-body">
+                        <div class="container v-middle">
+                          <div class="columns login-page">
+                            <div class="column is-5 login-sidebar is-hidden-mobile">
+                              <div class="login-gradient-background">
+                                <img src="delivlogobiru.png" style="ali min-width: 150%">
+                              </div>
+                            </div>
+                            <div class="column is-7 login-form-wrapper">
+                              <div class="column is-12 has-text-right register-btn">
+                                <a class="btn" name="button">Login</a>
+                              </div>
+                              <div class="column is-12 field-box">
+                                <div class="column is-7 is-offset-1">
+                                  <h1 style="color: black !important;" class="login-heading">Yuk Gabung DE-Car</h1>
+                                  <p class="login-subheading">Raih Penghasilan Tambahanmu!</p>
+                                  <form method="" action="">
+                                    <div class="field">
+                                      <p class="control has-icons-left has-icons-right">
+                                        <input class="input is-medium" type="email" placeholder="Email" value="" name="email" autofocus="" required>
+                                        <span class="icon is-medium is-left">
+                                          <i class="fa fa-envelope"></i>
+                                        </span>
+                                      </p>
+                                    </div>
+                                    <div class="field">
+                                      <p class="control has-icons-left has-icons-right">
+                                        <input class="input is-medium" type="password" placeholder="Password" name="password" required>
+                                        <span class="icon is-medium is-left">
+                                          <i class="fa fa-lock"></i>
+                                        </span>
+                                      </p>
+                                    </div>
+                                    <div class="field is-grouped is-grouped-centered login-btn-group">
+                                      <p class="control">
+                                        <a class="login-btn">
+                                          Register
+                                        </a>
+                                      </p>
+                                      <p class="control">
+                                        <a class="forgot-link" >Forgot Password</a>
+                                      </p>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- is-8 ends -->
+                          </div>
+                        </div>
+                        <!-- div.container ends -->
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+              <!-- Pill content -->
+              <div id="invoices" class="navtab-content pt-20 pb-20">
+                <div class="columns is-vcentered">
+                  <div class="column is-12">
+                    <section class="login is-fullheight">
+                      <div class="login-body">
+                        <div class="container v-middle">
+                          <div class="columns login-page">
+                            <div class="column is-5 login-sidebar is-hidden-mobile">
+                              <div class="login-gradient-background">
+                                <h1>Login</h1>
+                              </div>
+                            </div>
+                            <div class="column is-7 login-form-wrapper">
+                              <div class="column is-12 has-text-right register-btn">
+                                <a class="btn" name="button">Register</a>
+                              </div>
+                              <div class="column is-12 field-box">
+                                <div class="column is-7 is-offset-1">
+                                  <h1 class="login-heading">Welcome to the Site</h1>
+                                  <p class="login-subheading">Fill out thisto access super awesome imaginary control panel</p>
+                                  <form method="" action="">
+                                    <div class="field">
+                                      <p class="control has-icons-left has-icons-right">
+                                        <input class="input is-medium" type="email" placeholder="Email" value="" name="email" autofocus="" required>
+                                        <span class="icon is-medium is-left">
+                                          <i class="fa fa-envelope"></i>
+                                        </span>
+                                        <span class="icon is-small is-right">
+                                          <i class="fa fa-check"></i>
+                                        </span>
+                                      </p>
+                                    </div>
+                                    <div class="field">
+                                      <p class="control has-icons-left has-icons-right">
+                                        <input class="input is-medium" type="password" placeholder="Password" name="password" required>
+                                        <span class="icon is-medium is-left">
+                                          <i class="fa fa-lock"></i>
+                                        </span>
+                                        <span class="icon is-small is-right">
+                                          <i class="fa fa-eye"></i>
+                                        </span>
+                                      </p>
+                                    </div>
+                                    <div class="field is-grouped is-grouped-centered login-btn-group">
+                                      <p class="control">
+                                        <a class="login-btn">
+                                          Login
+                                        </a>
+                                      </p>
+                                      <p class="control">
+                                        <a class="forgot-link" >Forgot Password</a>
+                                      </p>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- is-8 ends -->
+                          </div>
+                        </div>
+                        <!-- div.container ends -->
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Navigation pills -->
+        </div>
+
+        <div><footer class="footer footerdark" style="background-color: #009cdf; color: #ffffff;">
+          <div class="container">
+            <div class="columns footer-columns is-flex-mobile">
+              <div class="column is-half-mobile">
+                <div class="footer-column">
+                  <div class="footer-header">
+                    <h3 style="color: black;">Product</h3>
+                  </div><ul class="link-list">
+                    <li><a style="color: white;  "href="/driver">De Ride</a></li>
+                    <li><a style="color: white;"href="">De Car</a></li>
+                    <li><a style="color: white;"href="">De Food</a></li>
+                    <li><a style="color: white;"href="">De Payment</a></li>
+                    <li><a style="color: white;"href="">De Saldo</a></li>
+                    <li><a style="color: white;"href="">De Shop</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="column is-half-mobile">
+                <div class="footer-column">
+                  <div class="footer-header">
+                    <h3 style="color: black;" >Company</h3>
+                  </div><ul class="link-list">
+                    <li><a style="color: white;"href="/">Terms of service</a></li>
+                    <li><a style="color: white;"href="/">Privacy policy</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="column is-half-mobile">
+                <div class="footer-column">
+                  <div class="footer-header">
+                    <h3 style="color: black;">Learning</h3>
+                  </div>
+                  <ul class="link-list">
+                    <li><a style="color: white;"href="">Resources</a></li>
+                    <li><a style="color: white;"href="http://blog.deliv.co.id">Blog</a></li>
+                    <li><a style="color: white;"href="#">FAQ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="column is-half-mobile">
+                <div class="footer-column">
+                  <div class="footer-logo">
+                    <img src="delivlogo.png" alt="" style="min-height: 40px;">
+                  </div>
+                  <div class="footer-header">
+                    <nav class="level is-mobile">
+                      <div class="level-left level-social">
+                        <div class="social-media">
+                          <ul>
+                            <li><a style="color: white;" href="https://www.facebook.com/#" rel="nofollow" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a style="color: white;"  href="https://twitter.com/#" rel="nofollow" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://instagram.com/#" rel="nofollow" style="color: white;"  target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/#" rel="nofollow" style="color: white;" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+                <div class="copyright">
+                  <span class="moto light-text">Copyright © 2019 by Deliv App</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+    <!-- Core js -->
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/modernizr.min.js"></script>
+    <!-- Plugins js -->
+    <script src="assets/js/slick-carousel/slick.min.js"></script>
+    <script src="assets/js/ggpopover/ggtooltip.js"></script>
+    <script src="assets/js/wallop/Wallop.min.js"></script>
+    <script src="assets/js/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/js/counterup/jquery.counterup.min.js"></script>
+    <script src="assets/js/slick-carousel/slick.min.js"></script>
+    <script src="assets/js/scrollreveal/scrollreveal.min.js"></script>
+    <!-- Bulkit js -->
+    <script src="assets/js/main.js"></script>
+    <!-- Page specific js -->
+    <script src="assets/js/pages/agency.js"></script>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+          }
+        </script>
+        <script>
+          function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+        </script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var parent = document.querySelector('.splitview'),
+            topPanel = parent.querySelector('.top'),
+            handle = parent.querySelector('.handle'),
+            skewHack = 0,
+            delta = 0;
+
+    // If the parent has .skewed class, set the skewHack var.
+    if (parent.className.indexOf('skewed') != -1) {
+      skewHack = 1000;
+    }
+
+    parent.addEventListener('mousemove', function(event) {
+        // Get the delta between the mouse position and center point.
+        delta = (event.clientX - window.innerWidth / 2) * 0.5;
+
+        // Move the handle.
+        handle.style.left = event.clientX + delta + 'px';
+
+        // Adjust the top panel width.
+        topPanel.style.width = event.clientX + skewHack + delta + 'px';
+      });
+  });
+</script>
+</body>
+</html>
