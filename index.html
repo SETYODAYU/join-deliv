@@ -613,41 +613,60 @@
                               </div>
                             </div>
                             <div class="column is-7 login-form-wrapper">
-                              <div class="column is-12 has-text-right register-btn">
-                                <a class="btn" name="button">Login</a>
-                              </div>
-                              <div class="column is-12 field-box">
-                                <div class="column is-7 is-offset-1">
-                                  <h1 style="color: black !important;" class="login-heading">Yuk Gabung DE-Car</h1>
-                                  <p class="login-subheading">Raih Penghasilan Tambahanmu!</p>
-                                  <form method="" action="">
-                                    <div class="field">
-                                      <p class="control has-icons-left has-icons-right">
-                                        <input class="input is-medium" type="email" placeholder="Email" value="" name="email" autofocus="" required>
-                                        <span class="icon is-medium is-left">
-                                          <i class="fa fa-envelope"></i>
-                                        </span>
-                                      </p>
+                              <div class="columns is-vcentered">
+                                <div class="column is-6 is-offset-3">
+                                  <div class="flex-card light-bordered light-raised">
+                                    <div class="card-body">
+                                      <h2 class="title is-4 text-bold mb-20">Create project</h2>
+                                      <form>
+                                        <div class="columns mt-50">
+                                          <div class="column">
+                                            <div class="control">
+                                              <label>Project ID</label>
+                                              <input class="input is-medium mt-5" type="text">
+                                            </div>
+                                            <div class="control">
+                                              <label>Project category</label>
+                                              <div class="mt-5"></div>
+                                              <select class="chosen-select" data-placeholder="Project category">
+                                                <option label="Project category"></option>
+                                                <option>Marketing</option>
+                                                <option>Sales</option>
+                                                <option>Support</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <div class="column">
+                                            <div class="control">
+                                              <label>Project name</label>
+                                              <input class="input is-medium mt-5" type="text">
+                                            </div>
+                                            <div class="control">
+                                              <label>Project type</label>
+                                              <div class="mt-5"></div>
+                                              <select class="chosen-select" data-placeholder="Project type">
+                                                <option label="Project type"></option>
+                                                <option>Kanban</option>
+                                                <option>Scrum</option>
+                                                <option>List</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="columns">
+                                          <div class="column">
+                                            <div class="control">
+                                              <textarea class="textarea is-grow" rows="5" placeholder="Enter a project description ..."></textarea>
+                                            </div>
+                                          </div>   
+                                        </div>
+                                        <div class="mt-30">  
+                                          <button class="button btn-align no-lh raised primary-btn">Create</button>
+                                          <button class="button is-link no-lh">Cancel</button>
+                                        </div>
+                                      </form> 
                                     </div>
-                                    <div class="field">
-                                      <p class="control has-icons-left has-icons-right">
-                                        <input class="input is-medium" type="password" placeholder="Password" name="password" required>
-                                        <span class="icon is-medium is-left">
-                                          <i class="fa fa-lock"></i>
-                                        </span>
-                                      </p>
-                                    </div>
-                                    <div class="field is-grouped is-grouped-centered login-btn-group">
-                                      <p class="control">
-                                        <a class="login-btn">
-                                          Register
-                                        </a>
-                                      </p>
-                                      <p class="control">
-                                        <a class="forgot-link" >Forgot Password</a>
-                                      </p>
-                                    </div>
-                                  </form>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -679,8 +698,8 @@
                               </div>
                               <div class="column is-12 field-box">
                                 <div class="column is-7 is-offset-1">
-                                  <h1 class="login-heading">Welcome to the Site</h1>
-                                  <p class="login-subheading">Fill out thisto access super awesome imaginary control panel</p>
+                                  <h1 style="color: black !important;" class="login-heading">Login</h1>
+                                  
                                   <form method="" action="">
                                     <div class="field">
                                       <p class="control has-icons-left has-icons-right">
